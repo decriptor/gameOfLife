@@ -7,6 +7,11 @@ namespace gol5
 		public Cell ()
 		{
 		}
+
+		public bool IsAlive {
+			get;
+			set;
+		}
 	}
 
 }

@@ -13,5 +13,13 @@ namespace Tests
 			var cell = new Cell ();
 			Assert.That (cell, Is.Not.Null); 
 		}
+
+		[Test]
+		public void A_cell_knows_if_its_alive ()
+		{
+			var cell = new Cell ();
+			cell.IsAlive = true;
+			Assert.That (cell.IsAlive); 
+		}
 	}
 }
