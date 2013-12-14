@@ -30,29 +30,13 @@ namespace Tests
 		}
 
 		[TestCase(0, false)]
-		public void A_cell_can_evolve_based_on_zero (int neig, bool alive)
+		[TestCase(2, true)]
+		[TestCase(3, true)]
+		public void A_living_cell_can_evolve (int neig, bool alive)
 		{
 			var cell = new Cell (true);
 			Cell newCell = cell.Evolve (neig);
 			Assert.That (newCell.IsAlive,Is.EqualTo(alive));
 		}
-
-		[Test]
-		public void A_cell_can_evolve_based_on_two_neigbers ()
-		{
-			var cell = new Cell (true);
-			Cell newCell = cell.Evolve (2);
-			Assert.That (newCell.IsAlive);
-		}
-
-		[Test]
-		public void A_cell_can_evolve_based_on_three_neigbers ()
-		{
-			var cell = new Cell (true);
-			Cell newCell = cell.Evolve (2);
-			Assert.That (newCell.IsAlive);
-		}
-
-
 	}
 }
