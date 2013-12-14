@@ -2,9 +2,9 @@
 
 namespace gol5
 {
-	public class MyClass
+	public class Cell
 	{
-		public MyClass ()
+		public Cell ()
 		{
 		}
 	}

@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using gol5;
 
 namespace Tests
 {
@@ -7,10 +8,10 @@ namespace Tests
 	public class Test
 	{
 		[Test ()]
-		public void TestCase ()
+		public void A_cell_can_be_constructed ()
 		{
-			Assert.That (true);
+			var cell = new Cell ();
+			Assert.That (cell, Is.Not.Null); 
 		}
 	}
 }
-
