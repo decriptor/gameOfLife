@@ -4,18 +4,19 @@ namespace gol5
 {
 	public class Cell
 	{
-		public Cell ()
+		public Cell (bool isAlive)
 		{
+			IsAlive = isAlive;
 		}
 
 		public bool IsAlive {
 			get;
-			set;
+			private set;
 		}
 
 		public Cell Evolve ()
 		{
-			return new Cell ();
+			return new Cell (false);
 		}
 	}
 
