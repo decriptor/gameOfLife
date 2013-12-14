@@ -25,8 +25,17 @@ namespace Tests
 		public void A_cell_can_evolve ()
 		{
 			var cell = new Cell (true);
-			Cell newCell = cell.Evolve ();
+			Cell newCell = cell.Evolve (0);
 			Assert.That (newCell != cell);
 		}
+
+		[Test]
+		public void A_cell_can_evolve_based_on_zero ()
+		{
+			var cell = new Cell (true);
+			Cell newCell = cell.Evolve (0);
+			Assert.That (!newCell.IsAlive);
+		}
+
 	}
 }

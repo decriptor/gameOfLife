@@ -14,8 +14,9 @@ namespace gol5
 			private set;
 		}
 
-		public Cell Evolve ()
+		public Cell Evolve (int livingNeighbors)
 		{
+
 			return new Cell (false);
 		}
 	}
