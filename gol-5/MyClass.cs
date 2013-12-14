@@ -16,8 +16,7 @@ namespace gol5
 
 		public Cell Evolve (int livingNeighbors)
 		{
-
-			return new Cell (false);
+			return new Cell (livingNeighbors == 2);
 		}
 	}
 
