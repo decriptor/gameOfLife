@@ -1,0 +1,5 @@
+/Users/sshaw/Projects/gol/gol-5/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/sshaw/Projects/gol/gol-5/bin/Debug/gol-5.dll.mdb
+/Users/sshaw/Projects/gol/gol-5/bin/Debug/gol-5.dll
+/Users/sshaw/Projects/gol/gol-5/obj/Debug/gol-5.dll
+/Users/sshaw/Projects/gol/gol-5/obj/Debug/gol-5.dll.mdb
