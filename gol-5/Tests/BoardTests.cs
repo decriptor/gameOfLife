@@ -7,12 +7,25 @@ namespace Tests
 	[TestFixture]
 	public class BoardTests
 	{
+		Board _board;
+
+		[SetUp]
+		public void SetUp ()
+		{
+			_board = new Board ();
+		}
 
 		[Test]
 		public void CanCreate ()
 		{
-			Board board = new Board ();
-			Assert.IsNotNull (board);
+			Assert.IsNotNull (_board);
+		}
+
+		[Test]
+		public void CanAddCell ()
+		{
+
+
 		}
 	}
 }
