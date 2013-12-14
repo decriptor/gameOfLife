@@ -9,7 +9,7 @@ namespace gol5
 			set;
 		}
 
-		public void AddCell (Cell cell)
+		public void AddCell (Cell cell, int x, int y)
 		{
 			Count++;
 		}

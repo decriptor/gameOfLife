@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System;
 using gol5;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Tests
 {
@@ -24,15 +25,15 @@ namespace Tests
 		[Test]
 		public void CanAddCell ()
 		{
-			_board.AddCell (new Cell (true));
+			_board.AddCell (new Cell (true), 0, 0);
 			Assert.That (_board.Count == 1);
 		}
 
 		[Test]
 		public void Can_Add_Two_Cells_To_Board ()
 		{
-			_board.AddCell (new Cell (true));
-			_board.AddCell (new Cell (true));
+			_board.AddCell (new Cell (true), 0, 0);
+			_board.AddCell (new Cell (true), 0, 0);
 
 			Assert.That (_board.Count == 2);
 		}
