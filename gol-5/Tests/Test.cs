@@ -21,5 +21,13 @@ namespace Tests
 			cell.IsAlive = true;
 			Assert.That (cell.IsAlive); 
 		}
+
+		[Test]
+		public void A_cell_can_evolve ()
+		{
+			var cell = new Cell ();
+			Cell newCell = cell.Evolve ();
+			Assert.That (newCell != cell);
+		}
 	}
 }

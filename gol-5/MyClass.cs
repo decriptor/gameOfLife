@@ -12,6 +12,11 @@ namespace gol5
 			get;
 			set;
 		}
+
+		public Cell Evolve ()
+		{
+			return new Cell ();
+		}
 	}
 
 }
