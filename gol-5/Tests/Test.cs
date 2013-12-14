@@ -45,5 +45,14 @@ namespace Tests
 			Assert.That (newCell.IsAlive);
 		}
 
+		[Test]
+		public void A_cell_can_evolve_based_on_three_neigbers ()
+		{
+			var cell = new Cell (true);
+			Cell newCell = cell.Evolve (3);
+			Assert.That (newCell.IsAlive);
+		}
+
+
 	}
 }
