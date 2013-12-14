@@ -13,6 +13,11 @@ namespace gol5
 		{
 			Count++;
 		}
+
+		public Cell GetCell (int i, int i2)
+		{
+			return new Cell (true);
+		}
 	}
 
 }

@@ -37,5 +37,14 @@ namespace Tests
 
 			Assert.That (_board.Count == 2);
 		}
+
+		[Test]
+		public void Can_get_cell_back_from_board ()
+		{
+			_board.AddCell (new Cell (true), 0, 0);
+			Cell cell = _board.GetCell (0, 0);
+
+			Assert.That (cell != null);
+		}
 	}
 }
