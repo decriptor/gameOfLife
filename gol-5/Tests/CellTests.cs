@@ -5,7 +5,7 @@ using gol5;
 namespace Tests
 {
 	[TestFixture ()]
-	public class Test
+	public class CellTests
 	{
 		[Test ()]
 		public void A_cell_can_be_constructed ()
