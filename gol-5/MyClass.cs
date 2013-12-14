@@ -16,7 +16,10 @@ namespace gol5
 
 		public Cell Evolve (int livingNeighbors)
 		{
-			return new Cell (livingNeighbors >= 2 && livingNeighbors < 4);
+			if(IsAlive)
+				return new Cell (livingNeighbors >= 2 && livingNeighbors < 4);
+
+			return new Cell (livingNeighbors == 3);
 		}
 	}
 

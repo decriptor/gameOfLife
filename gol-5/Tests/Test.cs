@@ -38,11 +38,28 @@ namespace Tests
 		[TestCase(6, false)]
 		[TestCase(7, false)]
 		[TestCase(8, false)]
-		public void A_living_cell_can_evolve (int neig, bool alive)
+		public void A_living_cell_can_evolve (int livingNeighbors, bool alive)
 		{
 			var cell = new Cell (true);
-			Cell newCell = cell.Evolve (neig);
+			Cell newCell = cell.Evolve (livingNeighbors);
 			Assert.That (newCell.IsAlive,Is.EqualTo(alive));
 		}
+
+		[TestCase(0, false)]
+		[TestCase(1, false)]
+		[TestCase(2, false)]
+		[TestCase(3, true)]
+		[TestCase(4, false)]
+		[TestCase(5, false)]
+		[TestCase(6, false)]
+		[TestCase(7, false)]
+		[TestCase(8, false)]
+		public void A_dead_cell_can_evolve (int livingNeighbors, bool alive)
+		{
+			var cell = new Cell (false);
+			Cell newCell = cell.Evolve (livingNeighbors);
+			Assert.That (newCell.IsAlive,Is.EqualTo(alive));
+		}
+
 	}
 }
