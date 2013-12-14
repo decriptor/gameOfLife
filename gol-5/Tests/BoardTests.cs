@@ -27,5 +27,14 @@ namespace Tests
 			_board.AddCell (new Cell (true));
 			Assert.That (_board.Count == 1);
 		}
+
+		[Test]
+		public void Can_Add_Two_Cells_To_Board ()
+		{
+			_board.AddCell (new Cell (true));
+			_board.AddCell (new Cell (true));
+
+			Assert.That (_board.Count == 2);
+		}
 	}
 }
