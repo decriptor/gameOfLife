@@ -29,12 +29,12 @@ namespace Tests
 			Assert.That (newCell != cell);
 		}
 
-		[Test]
-		public void A_cell_can_evolve_based_on_zero ()
+		[TestCase(0, false)]
+		public void A_cell_can_evolve_based_on_zero (int neig, bool alive)
 		{
 			var cell = new Cell (true);
-			Cell newCell = cell.Evolve (0);
-			Assert.That (!newCell.IsAlive);
+			Cell newCell = cell.Evolve (neig);
+			Assert.That (newCell.IsAlive,Is.EqualTo(alive));
 		}
 
 		[Test]
@@ -49,7 +49,7 @@ namespace Tests
 		public void A_cell_can_evolve_based_on_three_neigbers ()
 		{
 			var cell = new Cell (true);
-			Cell newCell = cell.Evolve (3);
+			Cell newCell = cell.Evolve (2);
 			Assert.That (newCell.IsAlive);
 		}
 
